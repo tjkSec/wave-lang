@@ -1,3 +1,5 @@
-div {
-    color: green --fixed;
+let bestColor = rgb(255,255,255);
+
+.myFavouriteColourDiv {
+    background: bestColor;
 }

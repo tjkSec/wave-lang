@@ -27,18 +27,18 @@ object Watch {
       + fileSeparator + getFileName(filePath).substring(0, getFileName(filePath).lastIndexOf(".")) + ".css")
     val bufferedWriter = new BufferedWriter(new FileWriter(file))
     val file_contents = new String(Files.readAllBytes(Paths.get(filePath)))
+    bufferedWriter.write("")
+    bufferedWriter.flush()
     bufferedWriter.write(syntax(file_contents))
     bufferedWriter.flush()
     bufferedWriter.close()
-
+    Syntax.printVars()
     println(main.splash("Success!", "blue") + main.splash(" File has been updated.", "white"))
     println("------------------------")
   }
 
   def syntax(wave_code: String): String = {
-    Seq(
-      "--fixed;" -> "!important",
-    ).foldLeft(wave_code.mkString("")){case (z, (s,r)) => z.replaceAll(s, r)}
+    Syntax.compile(wave_code)
   }
 
   def loadFile(filePath: String, fileProperties: FileDetails): Unit = {

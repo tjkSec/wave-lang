@@ -32,7 +32,10 @@ object Watch {
     bufferedWriter.write(syntax(file_contents))
     bufferedWriter.flush()
     bufferedWriter.close()
+<<<<<<< HEAD
+=======
     Syntax.printVars()
+>>>>>>> cd36009f6f694215de33aa835284e0c612699df9
     println(main.splash("Success!", "blue") + main.splash(" File has been updated.", "white"))
     println("------------------------")
   }

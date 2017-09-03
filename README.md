@@ -15,7 +15,7 @@ let myFont = 'Somatic', sans-serif;
 would compile into...
 
 ```css
-`/* ~ Wave Variable ~ */
+/* ~ Wave Variable ~ */
 /* ~ Wave Variable ~ */
 /* ~ Wave Variable ~ */
 
@@ -23,4 +23,5 @@ would compile into...
     font-family: 'Somatic', sans-serif;
     color: #eeeeee;
     background: #292D3E;
-}```
+}
+```

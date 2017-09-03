@@ -2,7 +2,7 @@ import java.io.File
 
 // NOTE RUNNING WITH FOLLOWING PARAMETERS
 /*
- --watch /home/trent/Desktop/scripts/scala/src/test/testFile.wave
+ --watch C:\Users\trent\Desktop\Wave\src\test\testFile.wave
  */
 
 object main {

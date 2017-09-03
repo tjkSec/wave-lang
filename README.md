@@ -1,6 +1,7 @@
 Wave is an upcoming css preprocessor that mimics es6 in syntax, here is an example of variables...
 
-`let backgroundColour = #292D3E;
+```css
+let backgroundColour = #292D3E;
 let textColour = #eeeeee;
 let myFont = 'Somatic', sans-serif;
 
@@ -8,10 +9,12 @@ let myFont = 'Somatic', sans-serif;
     font-family: myFont;
     color: textColour;
     background: backgroundColour;
-}`
+}
+```
 
 would compile into...
 
+```css
 `/* ~ Wave Variable ~ */
 /* ~ Wave Variable ~ */
 /* ~ Wave Variable ~ */
@@ -20,4 +23,4 @@ would compile into...
     font-family: 'Somatic', sans-serif;
     color: #eeeeee;
     background: #292D3E;
-}`
+}```

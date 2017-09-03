@@ -13,8 +13,10 @@ object Syntax {
       variables.add(m.toString.replaceAll(";", ""))
     }
     var replacements = Map(
+      // Shorthands
       "--fixed" -> "!important",
-      "(?m)^let.*" -> "/* ~ Wave Variable ~ */"
+      // Comments
+      "(?m)^let.*" -> "/* ~ Wave Variable ~ */",
     )
     for(variable <- variables.toArray) {
       val x = variable.toString.split(" ")
@@ -22,10 +24,11 @@ object Syntax {
       replacements += x(1) -> full
       replacements.foldLeft(wave_code){case (z, (s,r)) => z.replaceAll(s, r)}
     }
-    replacements.foldLeft(wave_code){case (z, (s,r)) => z.replaceAll(s, r)}
-  }
-
-  def printVars(): Unit = {
+    val existance1 = replacements.foldLeft(wave_code){case (z, (s,r)) => z.replaceAll(s, r)}
+    val presets = Map(
+      "material.indigo500" -> "#3E4F55"
+    )
+    presets.foldLeft(existance1) {case(z, (s,r)) => z.replaceAll(s, r)}
   }
 }
 
